@@ -10,6 +10,7 @@ Welcome to AdventOfCode's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   2015/day_1.rst
 
 Indices and tables
 ==================
