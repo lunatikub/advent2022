@@ -23,8 +23,8 @@ puzzle.h: puzzle.txt $(PUZZLE)
 	$(FORMAT) $(FOO) > $@
 
 clean:
-	rm sample.h
-	rm puzzle.h
-	rm $(BIN)
+	rm -f sample.h
+	rm -f puzzle.h
+	rm -f $(BIN)
 
 .PHONY: sample puzzle

@@ -1,4 +1,4 @@
-DAY=2
+DAY=3
 LIB=
 
 SRC=main.c
@@ -9,16 +9,12 @@ PUZZLE=puzzle.sh
 FORMAT=clang-format
 FOO=/tmp/foo.h
 
-all: sample_part1.h sample_part2.h puzzle.h $(BIN)
+all: sample.h puzzle.h $(BIN)
 
 $(BIN): $(SRC)
 	$(CC) $(FLAGS) $(SRC) -o $(BIN) $(LIB)
 
-sample_part2.h: sample_part2.txt $(PUZZLE)
-	./$(PUZZLE) $< > $(FOO)
-	$(FORMAT) $(FOO) > $@
-
-sample_part1.h: sample_part1.txt $(PUZZLE)
+sample.h: sample.txt $(PUZZLE)
 	./$(PUZZLE) $< > $(FOO)
 	$(FORMAT) $(FOO) > $@
 
@@ -27,8 +23,7 @@ puzzle.h: puzzle.txt $(PUZZLE)
 	$(FORMAT) $(FOO) > $@
 
 clean:
-	rm -f sample_part1.h
-	rm -f sample_part2.h
+	rm -f sample.h
 	rm -f puzzle.h
 	rm -f $(BIN)
 
