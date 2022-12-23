@@ -32,11 +32,11 @@ static void fill_grid_with_puzzle(void) {
   }
 }
 
-static unsigned count_square(void) {
+static unsigned count_square(unsigned threshold) {
   unsigned n = 0;
   for (unsigned x = 0; x < SZ; ++x) {
     for (unsigned y = 0; y < SZ; ++y) {
-      if (grid[x][y] >= 2) {
+      if (grid[x][y] >= threshold) {
         n++;
       }
     }
@@ -85,7 +85,7 @@ int main(void) {
   fill_grid_with_puzzle();
 
   // part 1
-  unsigned squares = count_square();
+  unsigned squares = count_square(2);
   printf("> part_1: %u squares\n", squares);
 
   // part 2
