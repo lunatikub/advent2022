@@ -10,7 +10,7 @@ FOO=/tmp/foo.h
 
 all: sample.h puzzle.h $(BIN)
 
-$(BIN): $(SRC)
+$(BIN): $(SRC) sample.h puzzle.h
 	$(CC) $(FLAGS) $(SRC) -o $(BIN) $(LIB)
 
 sample.h: sample.txt $(PUZZLE)
@@ -25,5 +25,3 @@ clean:
 	rm -f sample.h
 	rm -f puzzle.h
 	rm -f $(BIN)
-
-.PHONY: sample puzzle
