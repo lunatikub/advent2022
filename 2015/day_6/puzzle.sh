@@ -2,13 +2,11 @@
 
 INPUT="$1"
 
-[ -z "$INPUT" ] && echo "input needed..." && exit 1
-
 cat <<EOF
-static const inst_t insts[] = {
+static const input_t inputs[] = {
 EOF
 
-nr_inst=0
+nr_input=0
 
 while read -r line
 do
@@ -43,13 +41,13 @@ do
     echo 2>&1 "errrrrrr" && exit 1
   fi
 
-  nr_inst=$((nr_inst + 1))
+  nr_input=$((nr_input + 1))
 done < $INPUT
 
 cat <<EOF
 };
 
-#define NR_INST $nr_inst
+#define NR_INPUT $nr_input
 EOF
 
 exit 0
