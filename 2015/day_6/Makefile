@@ -1,0 +1,4 @@
+LIB=
+SRC=
+
+include ../../Makefile
