@@ -1,7 +1,7 @@
 #include <assert.h>
 #include <ctype.h>
-#include <stdint.h>
 #include <stdbool.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -95,7 +95,7 @@ static uint16_t solve(const char *node) {
 }
 
 static void wires_init(void) {
-   wires = malloc(sizeof(wire_t) * NR_INPUT);
+  wires = malloc(sizeof(wire_t) * NR_INPUT);
   for (unsigned i = 0; i < NR_INPUT; ++i) {
     wires[i].solved = false;
     wires[i].val = 0;

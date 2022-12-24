@@ -84,8 +84,8 @@ static inline void set_init(set_t *set, size_t sz) {
 
 static void count_house(const char *in) {
   coord_t santa_1 = {0, 0};
-  coord_t santa_2 = { 0, 0};
-  coord_t robot = { 0, 0 };
+  coord_t santa_2 = {0, 0};
+  coord_t robot = {0, 0};
   unsigned n = 0;
   set_t part_1;
   set_t part_2;

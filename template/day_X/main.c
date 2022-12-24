@@ -1,7 +1,7 @@
 #include <assert.h>
 #include <ctype.h>
-#include <stdint.h>
 #include <stdbool.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -13,6 +13,4 @@ typedef struct input {
 #include "sample.h"
 //#include "puzzle.h"
 
-int main(void) {
-  return 0;
-}
+int main(void) { return 0; }

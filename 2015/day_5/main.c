@@ -81,8 +81,8 @@ static bool property_5(const char *str, size_t len) {
 typedef bool (*property_cb)(const char *, size_t);
 
 // A string is nice if its respects all the properties
-static inline bool is_nice(const property_cb *properties,
-                           const char *str, size_t len) {
+static inline bool is_nice(const property_cb *properties, const char *str,
+                           size_t len) {
   unsigned i = 0;
   while (properties[i] != NULL) {
     if (properties[i](str, len) == false) {

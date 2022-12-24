@@ -1,6 +1,15 @@
+#include <assert.h>
+#include <ctype.h>
+#include <stdbool.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/queue.h>
+
+typedef struct input {
+  const char *str;
+} input_t;
 
 //#include "sample.h"
 #include "puzzle.h"
@@ -31,8 +40,8 @@ int main(void) {
   unsigned tot_nr_char = 0;
   unsigned tot_nr_code_encoded = 0;
 
-  for (unsigned i = 0; i < NR_LINE; ++i) {
-    const char *str = lines[i];
+  for (unsigned i = 0; i < NR_INPUT; ++i) {
+    const char *str = inputs[i].str;
 
     unsigned len = strlen(str);
     unsigned nr_char = 0;
@@ -45,9 +54,7 @@ int main(void) {
     tot_nr_code_encoded += nr_encoded + len + 6; /* "\"string\"" */
   }
 
-  printf("> part_1: (%u - %u) = %u\n", tot_nr_code, tot_nr_char,
-         tot_nr_code - tot_nr_char);
-  printf("> part_2: (%u - %u) = %u\n", tot_nr_code_encoded, tot_nr_code,
-         tot_nr_code_encoded - tot_nr_code);
+  printf("> part_1: %u\n", tot_nr_code - tot_nr_char);
+  printf("> part_2: %u\n", tot_nr_code_encoded - tot_nr_code);
   return 0;
 }

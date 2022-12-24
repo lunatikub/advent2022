@@ -6,9 +6,9 @@
 #include <sys/queue.h>
 
 typedef struct input {
-    unsigned l;
-    unsigned h;
-    unsigned w;
+  unsigned l;
+  unsigned h;
+  unsigned w;
 } input_t;
 
 //#include "sample.h"

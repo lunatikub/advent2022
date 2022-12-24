@@ -10,13 +10,13 @@ typedef struct set {
 } set_t;
 
 static inline bool set_exist(set_t *set, const void *data) {
-    elt_t *iter;
-    SLIST_FOREACH(iter, &set->head, next) {
-      if (memcmp(iter->data, data, set->sz) == 0) {
-        return true;
-      }
+  elt_t *iter;
+  SLIST_FOREACH(iter, &set->head, next) {
+    if (memcmp(iter->data, data, set->sz) == 0) {
+      return true;
     }
-    return false;
+  }
+  return false;
 }
 
 static inline void set_add(set_t *set, void *data) {
