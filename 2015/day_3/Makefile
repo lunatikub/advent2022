@@ -1,4 +1,4 @@
 LIB=
 SRC=
 
-include ../../Makefile
+include ../../common/Makefile
