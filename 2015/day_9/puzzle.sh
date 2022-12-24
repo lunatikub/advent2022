@@ -1,13 +1,12 @@
 #!/bin/bash
 
 INPUT="$1"
-[ -z "$INPUT" ] && echo "input needed..." && exit 1
 
 cat <<EOF
-static dist_t dists[] = {
+static const input_t inputs[] = {
 EOF
 
-nr_dist=0
+nr_input=0
 
 while read -r line
 do
@@ -15,13 +14,13 @@ do
   city_2=$(echo $line | cut -d' ' -f3)
   dist=$(echo $line | cut -d' ' -f5)
   echo "  { \"$city_1\", \"$city_2\", $dist },"
-  nr_dist=$((nr_dist + 1))
+  nr_input=$((nr_input + 1))
 done < $INPUT
 
 cat <<EOF
 };
 
-#define NR_DIST $nr_dist
+#define NR_INPUT $nr_input
 EOF
 
 exit 0

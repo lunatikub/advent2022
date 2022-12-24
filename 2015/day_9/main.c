@@ -1,14 +1,17 @@
+#include <assert.h>
+#include <ctype.h>
+#include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <sys/queue.h>
 
-typedef struct dist {
-  char *city_1;
-  char *city_2;
-  unsigned n;
-} dist_t;
+typedef struct input {
+  const char *city_1;
+  const char *city_2;
+  unsigned distance;
+} input_t;
 
 //#include "sample.h"
 #include "puzzle.h"
@@ -61,20 +64,20 @@ static unsigned get_distance(unsigned id_1, unsigned id_2) {
   city_t *city_1 = find_city_by_id(id_1);
   city_t *city_2 = find_city_by_id(id_2);
 
-  for (unsigned i = 0; i < NR_DIST; ++i) {
-    dist_t *d = &dists[i];
-    if ((strcmp(d->city_1, city_1->name) == 0 &&
-         strcmp(d->city_2, city_2->name) == 0) ||
-        (strcmp(d->city_1, city_2->name) == 0 &&
-         strcmp(d->city_2, city_1->name) == 0)) {
-      return d->n;
+  for (unsigned i = 0; i < NR_INPUT; ++i) {
+    const input_t *in = &inputs[i];
+    if ((strcmp(in->city_1, city_1->name) == 0 &&
+         strcmp(in->city_2, city_2->name) == 0) ||
+        (strcmp(in->city_1, city_2->name) == 0 &&
+         strcmp(in->city_2, city_1->name) == 0)) {
+      return in->distance;
     }
   }
-  printf("> err distance");
+  abort();
   return 0;
 }
 
-static void get_route(unsigned *id, unsigned *shortest, unsigned *longest) {
+static void combination(unsigned *id, unsigned *shortest, unsigned *longest) {
   unsigned route = 0;
   for (unsigned i = 0; i < nr_city - 1; ++i) {
     route += get_distance(id[i], id[i + 1]);
@@ -90,7 +93,7 @@ static void get_route(unsigned *id, unsigned *shortest, unsigned *longest) {
 static void permutation(unsigned *id, unsigned l, unsigned r,
                         unsigned *shortest, unsigned *longest) {
   if (l == r) {
-    get_route(id, shortest, longest);
+    combination(id, shortest, longest);
     return;
   }
 
@@ -106,9 +109,9 @@ int main(void) {
   SLIST_INIT(&cities);
 
   // build the set of cities
-  for (i = 0; i < NR_DIST; ++i) {
-    lookup_create_city(dists[i].city_1);
-    lookup_create_city(dists[i].city_2);
+  for (i = 0; i < NR_INPUT; ++i) {
+    lookup_create_city(inputs[i].city_1);
+    lookup_create_city(inputs[i].city_2);
   }
 
   // build an array of ids from this list of cities
@@ -121,8 +124,8 @@ int main(void) {
   unsigned shortest = INT32_MAX;
   unsigned longest = 0;
   permutation(id, 0, nr_city - 1, &shortest, &longest);
-  printf("> shortest: %u\n", shortest);
-  printf("> longtest: %u\n", longest);
+  printf("> part 1: %u\n", shortest);
+  printf("> part 2: %u\n", longest);
 
   return 0;
 }
