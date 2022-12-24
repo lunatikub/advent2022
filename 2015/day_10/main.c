@@ -1,8 +1,18 @@
 #include <assert.h>
+#include <ctype.h>
 #include <stdbool.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/queue.h>
+
+typedef struct input {
+  const char *str;
+} input_t;
+
+//#include "sample.
+#include "puzzle.h"
 
 #define STR_LEN 5000000
 
@@ -37,17 +47,17 @@ int main(void) {
   char *in = calloc(1, STR_LEN);
   char *out = calloc(1, STR_LEN);
 
-  strcpy(in, "1113222113");
+  strcpy(in, inputs[0].str);
 
-  for (unsigned i = 0; i < 50; ++i) {
+  for (unsigned i = 0; i < PART_2; ++i) {
     seq(in, strlen(in), out);
     strcpy(in, out);
     memset(out, 0, STR_LEN);
     if (i == PART_1 - 1) {
-      printf("> part 1:%lu\n", strlen(in));
+      printf("> part 1: %lu\n", strlen(in));
     }
   }
-  printf("> part 2:%lu\n", strlen(in));
+  printf("> part 2: %lu\n", strlen(in));
 
   free(in);
   free(out);

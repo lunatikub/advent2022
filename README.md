@@ -13,5 +13,6 @@
  + **Day 7**, Recursively solve and bit manipulation: [Some Assembly Require](https://adventofcode.com/2015/day/7)
  + **Day 8**, Advanced string manipulation (escaped characters): [Matchsticks](https://adventofcode.com/2015/day/8)
  + **Day 9**, Permuation and combination: [All in a Single Night](https://adventofcode.com/2015/day/9)
+ + **Day 10**, Smoke the CPU [Elves Look, Elves Say](https://adventofcode.com/2015/day/10)
  + **Day 13**, Permutation and combination [Knights of the Dinner Table](https://adventofcode.com/2015/day/13)
  + **Day 14**, Sequentially computing [Reindeer Olympics](https://adventofcode.com/2015/day/14)
