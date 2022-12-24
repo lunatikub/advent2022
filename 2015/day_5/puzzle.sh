@@ -2,24 +2,22 @@
 
 INPUT="$1"
 
-[ -z "$INPUT" ] && echo "input needed..." && exit 1
-
 cat <<EOF
-static const char *puzzle[] = {
+static const input_t inputs[] = {
 EOF
 
-nr_str=0
+nr_input=0
 
 while read -r line
 do
-  echo "  \"$line\","
-  nr_str=$((nr_str + 1))
+  echo "  { \"$line\" },"
+  nr_input=$((nr_input + 1))
 done < $INPUT
 
 cat <<EOF
 };
 
-#define NR_STR $nr_str
+#define NR_INPUT $nr_input
 EOF
 
 exit 0

@@ -107,8 +107,8 @@ static void count_house(const char *in) {
     set_add(&part_2, c);
   }
 
-  printf("> part_1: %lu\n", part_1.nr);
-  printf("> part_2: %lu\n", part_2.nr);
+  printf("> part 1: %lu\n", part_1.nr);
+  printf("> part 2: %lu\n", part_2.nr);
   set_free(&part_1);
   set_free(&part_2);
 }
