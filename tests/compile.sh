@@ -29,5 +29,4 @@ foreach_day compile
 echo -e "(${YELLOW}${tot_ms}ms${ENDCOLOR})"
 
 rm -rf $OUT
-
 exit 0

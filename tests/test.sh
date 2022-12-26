@@ -10,7 +10,6 @@ OUT_2=$(mktemp -t "AOC.OUT.XXXXXX")
 
 test_day() {
   local start=$(get_time_ms)
-  echo -n "    - test "
   ./aoc_puzzle > $OUT
   local expected="$script_dir/expected/${y}_day_${d}.txt"
   diff $OUT $expected > $OUT_2
