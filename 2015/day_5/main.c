@@ -9,8 +9,11 @@ typedef struct input {
   char *str;
 } input_t;
 
-//#include "sample.h"
+#ifdef PUZZLE
 #include "puzzle.h"
+#else
+#include "sample.h"
+#endif
 
 // Return true if it contains at least three vowels (aeiou only).
 // Return false otherwise.

@@ -12,8 +12,11 @@ typedef struct input {
   unsigned rest;  // number of seconds it has to rest
 } input_t;
 
-//#include "sample.h"
+#ifdef PUZZLE
 #include "puzzle.h"
+#else
+#include "sample.h"
+#endif
 
 typedef struct reindeer {
   unsigned idx;   // input index

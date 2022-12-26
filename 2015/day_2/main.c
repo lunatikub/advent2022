@@ -11,8 +11,11 @@ typedef struct input {
   unsigned w;
 } input_t;
 
-//#include "sample.h"
+#ifdef PUZZLE
 #include "puzzle.h"
+#else
+#include "sample.h"
+#endif
 
 int main(void) {
   unsigned part_1 = 0;

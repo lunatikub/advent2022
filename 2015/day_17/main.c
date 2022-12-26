@@ -7,18 +7,16 @@
 #include <string.h>
 #include <sys/queue.h>
 
-#define PUZZLE
-
 typedef struct input {
   unsigned liter; // size of the container in liter
 } input_t;
 
-#ifndef PUZZLE
-#include "sample.h"
-#define TARGET 25
-#else
+#ifdef PUZZLE
 #include "puzzle.h"
 #define TARGET 150
+#else
+#include "sample.h"
+#define TARGET 25
 #endif
 
 static unsigned n;    // number of containers can contain TARGET

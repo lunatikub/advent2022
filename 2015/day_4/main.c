@@ -11,8 +11,11 @@ typedef struct input {
   char *str;
 } input_t;
 
-//#include "sample.h"
+#ifdef PUZZLE
 #include "puzzle.h"
+#else
+#include "sample.h"
+#endif
 
 static bool start_with_0(unsigned char *result, unsigned nr_zero) {
   if (nr_zero == 5) {

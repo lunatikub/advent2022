@@ -1,7 +1,21 @@
 #include <assert.h>
+#include <ctype.h>
 #include <stdbool.h>
+#include <stdint.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
+#include <sys/queue.h>
+
+typedef struct input {
+  const char *password;
+} input_t;
+
+#ifndef PUZZLE
+#include "sample.h"
+#else
+#include "puzzle.h"
+#endif
 
 #define WORD_LEN 3
 #define NR_WORD 15
@@ -85,15 +99,19 @@ void next_pwd(char *password, unsigned len) {
 }
 
 int main(void) {
-  char password[] = "hxbxwxba";
-  unsigned len = strlen(password);
+  for (unsigned i = 0; i < NR_INPUT; ++i) {
+    const char *password = inputs[i].password;
+    unsigned len = strlen(password);
+    char *new_password = strdup(password);
 
-  next_pwd(password, len);
-  printf("> part_1: %s\n", password);
+    next_pwd(new_password, len);
+    printf("> part_1: %s\n", new_password);
 
-  inc(password, len - 1);
-  next_pwd(password, len);
-  printf("> part_2: %s\n", password);
+    inc(new_password, len - 1);
+    next_pwd(new_password, len);
+    printf("> part_2: %s\n", new_password);
 
+    free(new_password);
+  }
   return 0;
 }

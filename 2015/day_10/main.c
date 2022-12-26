@@ -11,8 +11,11 @@ typedef struct input {
   const char *str;
 } input_t;
 
-//#include "sample.
+#ifdef PUZZLE
 #include "puzzle.h"
+#else
+#include "sample.h"
+#endif
 
 #define STR_LEN 5000000
 

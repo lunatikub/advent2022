@@ -23,8 +23,11 @@ typedef struct input {
   coord_t to;
 } input_t;
 
-//#include "sample.
+#ifdef PUZZLE
 #include "puzzle.h"
+#else
+#include "sample.h"
+#endif
 
 #define GRID_SZ 1000
 static int grid_1[GRID_SZ * GRID_SZ];

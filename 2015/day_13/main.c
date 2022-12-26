@@ -11,8 +11,11 @@ typedef struct input {
   int happinnes; // happinness (gain or lose)
 } input_t;
 
-//#include "sample.h"
+#ifdef PUZZLE
 #include "puzzle.h"
+#else
+#include "sample.h"
+#endif
 
 typedef struct person {
   SLIST_ENTRY(person) next;

@@ -23,8 +23,11 @@ typedef struct input {
   char *out;
 } input_t;
 
-//#include "sample.h"
+#ifdef PUZZLE
 #include "puzzle.h"
+#else
+#include "sample.h"
+#endif
 
 typedef struct wire {
   uint16_t val;

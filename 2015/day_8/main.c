@@ -11,8 +11,11 @@ typedef struct input {
   const char *str;
 } input_t;
 
-//#include "sample.h"
+#ifdef PUZZLE
 #include "puzzle.h"
+#else
+#include "sample.h"
+#endif
 
 // '\"' have been replaced by '@D'
 // '\\' have been replaced by '@B'

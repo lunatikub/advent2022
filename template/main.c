@@ -10,7 +10,10 @@
 typedef struct input {
 } input_t;
 
+#ifndef PUZZLE
 #include "sample.h"
-//#include "puzzle.h"
+#else
+#include "puzzle.h"
+#endif
 
 int main(void) { return 0; }

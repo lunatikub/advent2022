@@ -8,11 +8,15 @@ PUZZLE=puzzle.sh
 FORMAT=clang-format
 FOO=/tmp/foo.h
 
-all: sample.h puzzle.h $(BIN)
+all: puzzle sample
 
-$(BIN): $(SRC) sample.h puzzle.h
-	$(CC) $(FLAGS) $(OPTIM) $(SRC) -o $(BIN) $(LIB)
-	$(CC) $(FLAGS) $(DEBUG) $(SRC) -o $(BIN)_dbg $(LIB)
+puzzle: puzzle.h $(SRC)
+	$(CC) $(FLAGS) -D PUZZLE $(OPTIM) $(SRC) -o $(BIN)_puzzle $(LIB)
+	$(CC) $(FLAGS) -D PUZZLE $(DEBUG) $(SRC) -o $(BIN)_puzzle_dbg $(LIB)
+
+sample: sample.h $(SRC)
+	$(CC) $(FLAGS) -D SAMPLE $(OPTIM) $(SRC) -o $(BIN)_sample $(LIB)
+	$(CC) $(FLAGS) -D SAMPLE $(DEBUG) $(SRC) -o $(BIN)_sample_dbg $(LIB)
 
 sample.h: sample.txt $(PUZZLE)
 	./$(PUZZLE) $< > $(FOO)
@@ -25,5 +29,7 @@ puzzle.h: puzzle.txt $(PUZZLE)
 clean:
 	rm -f sample.h
 	rm -f puzzle.h
-	rm -f $(BIN)
-	rm -f $(BIN)_dbg
+	rm -f $(BIN)_puzzle
+	rm -f $(BIN)_puzzle_dbg
+	rm -f $(BIN)_sample
+	rm -f $(BIN)_sample_dbg

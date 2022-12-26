@@ -9,8 +9,11 @@ typedef struct input {
   char *str;
 } input_t;
 
-//#include "sample.h"
+#ifdef PUZZLE
 #include "puzzle.h"
+#else
+#include "sample.h"
+#endif
 
 int main(void) {
   int floor = 0;
