@@ -29,7 +29,7 @@ test_day() {
 tot_ms=0
 title "test"
 foreach_day test_day
-echo -e "(${YELLOW}${tot_ms}ms${ENDCOLOR})"
+echo -e "\nTotal: ${CYAN}${tot_ms}ms${ENDCOLOR}"
 
 rm -rf $OUT
 rm -rf $OUT_2

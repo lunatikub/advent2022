@@ -26,7 +26,7 @@ compile() {
 tot_ms=0
 title "compilation"
 foreach_day compile
-echo -e "(${YELLOW}${tot_ms}ms${ENDCOLOR})"
+echo -e "\nTotal: ${CYAN}${tot_ms}ms${ENDCOLOR}"
 
 rm -rf $OUT
 exit 0

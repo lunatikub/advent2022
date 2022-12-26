@@ -4,6 +4,10 @@
 
 ## Day completed
 
+### 2018 (1/25)
+
+ + **Day 1**, Simple array manipulation and flag: [Chronal Calibration](https://adventofcode.com/2018/day/1)
+
 ### 2015 (14/25)
 
  + **Day 1**, Simple string manipulation and counter: [Not Quite Lisp](https://adventofcode.com/2015/day/1)

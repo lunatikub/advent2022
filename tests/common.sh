@@ -18,7 +18,7 @@ foreach_day() {
   local cb=$1
   for y in $years
   do
-    echo -e "${YELLOW}[[[$y]]]${ENDCOLOR}"
+    echo -e "\n${YELLOW}[[[$y]]]${ENDCOLOR}"
     for d in ${days[$y]}
     do
       echo -en "  + day $d "
@@ -32,7 +32,6 @@ foreach_day() {
 title() {
   local title=$1
   echo -e "------- ${BLUE}${title}${ENDCOLOR} -------"
-  echo ""
 }
 
 get_time_ms() {
