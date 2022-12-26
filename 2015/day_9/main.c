@@ -77,7 +77,7 @@ static unsigned get_distance(unsigned id_1, unsigned id_2) {
   return 0;
 }
 
-static void combination(unsigned *id, unsigned *shortest, unsigned *longest) {
+static void permutation(unsigned *id, unsigned *shortest, unsigned *longest) {
   unsigned route = 0;
   for (unsigned i = 0; i < nr_city - 1; ++i) {
     route += get_distance(id[i], id[i + 1]);
@@ -90,16 +90,16 @@ static void combination(unsigned *id, unsigned *shortest, unsigned *longest) {
   }
 }
 
-static void permutation(unsigned *id, unsigned l, unsigned r,
-                        unsigned *shortest, unsigned *longest) {
+static void permutations(unsigned *id, unsigned l, unsigned r,
+                         unsigned *shortest, unsigned *longest) {
   if (l == r) {
-    combination(id, shortest, longest);
+    permutation(id, shortest, longest);
     return;
   }
 
   for (unsigned i = l; i <= r; ++i) {
     swap(id, l, i);
-    permutation(id, l + 1, r, shortest, longest);
+    permutations(id, l + 1, r, shortest, longest);
     swap(id, l, i);
   }
 }
@@ -123,7 +123,7 @@ int main(void) {
   // build all the permutations
   unsigned shortest = INT32_MAX;
   unsigned longest = 0;
-  permutation(id, 0, nr_city - 1, &shortest, &longest);
+  permutations(id, 0, nr_city - 1, &shortest, &longest);
   printf("> part 1: %u\n", shortest);
   printf("> part 2: %u\n", longest);
 

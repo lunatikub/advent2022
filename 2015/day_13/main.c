@@ -65,7 +65,7 @@ static int get_happinness(const char *p1, const char *p2) {
   return 0; // "me"
 }
 
-static void combination(unsigned *ids, int *max_happinnes) {
+static void permutation(unsigned *ids, int *max_happinnes) {
   int happinnes = 0;
   for (unsigned i = 0; i < nr_person; ++i) {
     unsigned id = ids[i];
@@ -99,16 +99,16 @@ static unsigned *create_list_of_ids(void) {
   return ids;
 }
 
-static void permutation(unsigned *ids, unsigned l, unsigned r,
-                        int *max_happinnes) {
+static void permutations(unsigned *ids, unsigned l, unsigned r,
+                         int *max_happinnes) {
   if (l == r) {
-    combination(ids, max_happinnes);
+    permutation(ids, max_happinnes);
     return;
   }
 
   for (unsigned i = l; i <= r; ++i) {
     swap(ids, l, i);
-    permutation(ids, l + 1, r, max_happinnes);
+    permutations(ids, l + 1, r, max_happinnes);
     swap(ids, l, i);
   }
 }
@@ -128,7 +128,7 @@ int main(void) {
   // permutations/combinations
   max_happinnes = 0;
   ids = create_list_of_ids();
-  permutation(ids, 0, nr_person - 1, &max_happinnes);
+  permutations(ids, 0, nr_person - 1, &max_happinnes);
   printf("> part_1: %i\n", max_happinnes);
   free(ids);
 
@@ -137,7 +137,7 @@ int main(void) {
   person_add("me");
   ids = create_list_of_ids();
   max_happinnes = 0;
-  permutation(ids, 0, nr_person - 1, &max_happinnes);
+  permutations(ids, 0, nr_person - 1, &max_happinnes);
   free(ids);
   printf("> part_2: %i\n", max_happinnes);
 

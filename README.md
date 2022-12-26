@@ -12,7 +12,12 @@
  + **Day 6**, Two dimensional array: [Probably a Fire Hazard](https://adventofcode.com/2015/day/6)
  + **Day 7**, Recursively solve and bit manipulation: [Some Assembly Require](https://adventofcode.com/2015/day/7)
  + **Day 8**, Advanced string manipulation (escaped characters): [Matchsticks](https://adventofcode.com/2015/day/8)
- + **Day 9**, Permuation and combination: [All in a Single Night](https://adventofcode.com/2015/day/9)
- + **Day 10**, Smoke the CPU [Elves Look, Elves Say](https://adventofcode.com/2015/day/10)
- + **Day 13**, Permutation and combination [Knights of the Dinner Table](https://adventofcode.com/2015/day/13)
- + **Day 14**, Sequentially computing [Reindeer Olympics](https://adventofcode.com/2015/day/14)
+ + **Day 9**, Permuation: [All in a Single Night](https://adventofcode.com/2015/day/9)
+ + **Day 10**, Smoke the CPU: [Elves Look, Elves Say](https://adventofcode.com/2015/day/10)
+ + **Day 11**
+ + **Day 12**
+ + **Day 13**, Permutation: [Knights of the Dinner Table](https://adventofcode.com/2015/day/13)
+ + **Day 14**, Sequentially computing: [Reindeer Olympics](https://adventofcode.com/2015/day/14)
+ + **Day 15**
+ + **Day 16**
+ + **Day 17**, Combination [No Such Thing as Too Much](https://adventofcode.com/2015/day/17)

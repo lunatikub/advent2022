@@ -1,4 +1,4 @@
-static void combination(unsigned *ids) {
+static void permutation(unsigned *ids) {
   for (unsigned i = 0; i < nr_ids; ++i) {
     printf("%u ", ids[i]);
   }
@@ -11,7 +11,7 @@ static void swap(unsigned *ids, unsigned src, unsigned dst) {
   ids[dst] = tmp;
 }
 
-static void permutation(unsigned *ids, unsigned l, unsigned r) {
+static void permutations(unsigned *ids, unsigned l, unsigned r) {
   if (l == r) {
     combination(ids);
     return;
@@ -24,4 +24,4 @@ static void permutation(unsigned *ids, unsigned l, unsigned r) {
   }
 }
 
-permutation(ids, 0, nr_ids - 1);
+permutations(ids, 0, nr_ids - 1);
