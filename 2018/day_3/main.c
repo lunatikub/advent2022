@@ -1,5 +1,7 @@
 #include <assert.h>
+#include <ctype.h>
 #include <stdbool.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -13,8 +15,11 @@ typedef struct input {
   unsigned h;  // height of the rectangle
 } input_t;
 
-//#include "sample.h"
+#ifndef PUZZLE
+#include "sample.h"
+#else
 #include "puzzle.h"
+#endif
 
 #define SZ 1000
 static unsigned grid[SZ][SZ];
@@ -86,12 +91,12 @@ int main(void) {
 
   // part 1
   unsigned squares = count_square(2);
-  printf("> part_1: %u squares\n", squares);
+  printf("> part 1: %u\n", squares);
 
   // part 2
   const input_t *in = find_rect_not_overlapped();
   assert(in != NULL);
-  printf("> part_2: id: %u (x:%u, y:%u, w:%u, h:%u)\n", in->id, in->x, in->y,
-         in->w, in->h);
+  printf("> part 2: %u\n", in->id);
+
   return 0;
 }

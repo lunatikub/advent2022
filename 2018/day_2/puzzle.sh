@@ -1,7 +1,5 @@
 #!/usr/bin/bash
 
-set -e
-
 INPUT="$1"
 
 cat <<EOF
