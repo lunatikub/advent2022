@@ -1,16 +1,21 @@
+#include <assert.h>
+#include <ctype.h>
 #include <stdbool.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <sys/queue.h>
 #include <string.h>
+#include <sys/queue.h>
 
 typedef struct input {
   char *str;
 } input_t;
 
-//#include "sample_part1.h"
-//#include "sample_part2.h"
+#ifndef PUZZLE
+#include "sample.h"
+#else
 #include "puzzle.h"
+#endif
 
 #define ALPHA_SZ 26
 
@@ -39,7 +44,7 @@ int main(void) {
     twos += has_two ? 1 : 0;
     threes += has_three ? 1 : 0;
   }
-  printf("> part_1: twos=%u, threes=%u -> %u\n", twos, threes, twos * threes);
+  printf("> part 1: %u\n", twos * threes);
 
   // part 2
   const char *src;
