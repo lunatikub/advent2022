@@ -13,13 +13,13 @@ $ ls
 
 ## Day completed
 
-### 2018 (1/25)
+### 2018 (3/25)
 
  + **Day 1**, Simple array manipulation and flag: [Chronal Calibration](https://adventofcode.com/2018/day/1)
  + **Day 2**, Simple string manipulation: [Inventory Management System](https://adventofcode.com/2018/day/2)
  + **Day 3**, Two dimensional array manipulation: [No Matter How You Slice It](https://adventofcode.com/2018/day/3)
 
-### 2015 (14/25)
+### 2015 (15/25)
 
  + **Day 1**, Simple string manipulation and counter: [Not Quite Lisp](https://adventofcode.com/2015/day/1)
  + **Day 2**, Arithmetic and comparison statement: [I Was Told There Would Be No Math](https://adventofcode.com/2015/day/2)
@@ -35,6 +35,6 @@ $ ls
  + **Day 12**
  + **Day 13**, Permutation: [Knights of the Dinner Table](https://adventofcode.com/2015/day/13)
  + **Day 14**, Sequentially computing: [Reindeer Olympics](https://adventofcode.com/2015/day/14)
- + **Day 15**
+ + **Day 15**, Addition combination: [Science for Hungry People](https://adventofcode.com/2015/day/15)
  + **Day 16**
  + **Day 17**, Combination [No Such Thing as Too Much](https://adventofcode.com/2015/day/17)
