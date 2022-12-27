@@ -13,6 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: generate puzzle
+      run: ./tests/generate_puzzle.sh
     - name: compile
       run: ./tests/compile.sh
     - name: test
