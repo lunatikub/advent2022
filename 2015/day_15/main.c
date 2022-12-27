@@ -20,10 +20,8 @@ typedef struct input {
 
 #ifndef PUZZLE
 #include "sample.h"
-#include "combi_2.h"
 #else
 #include "puzzle.h"
-#include "combi_4.h"
 #endif
 
 #define CALORIES_TARGET 500
