@@ -7,9 +7,9 @@ source $script_dir/common.sh
 
 OUT=$(mktemp -t "AOC.OUT.XXXXXX")
 
-compile() {
+generate_puzzle() {
   local start=$(get_time_ms)
-  make puzzle > $OUT 2>&1
+  make puzzle.h > $OUT 2>&1
   res=$?
   local end=$(get_time_ms)
   tot_ms=$((tot_ms + (end - start)))
@@ -24,8 +24,8 @@ compile() {
 }
 
 tot_ms=0
-title "compilation"
-foreach_day compile
+title "generate puzzle"
+foreach_day generate_puzzle
 echo -e "\nTotal: ${CYAN}${tot_ms}ms${ENDCOLOR}"
 
 rm -rf $OUT
