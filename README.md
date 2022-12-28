@@ -13,11 +13,13 @@ $ ls
 
 ## Day completed
 
-### 2018 (3/25)
+### 2018 (4/25)
 
  + **Day 1**, Simple array manipulation and flag: [Chronal Calibration](https://adventofcode.com/2018/day/1)
  + **Day 2**, Simple string manipulation: [Inventory Management System](https://adventofcode.com/2018/day/2)
  + **Day 3**, Two dimensional array manipulation: [No Matter How You Slice It](https://adventofcode.com/2018/day/3)
+ + **Day 4**,
+ + **Day 5**, String manipulation (memmove): [Day 5: Alchemical Reduction](https://adventofcode.com/2018/day/5)
 
 ### 2015 (15/25)
 
