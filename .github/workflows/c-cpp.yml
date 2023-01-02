@@ -14,10 +14,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: generate puzzle
-      run: ./tests/generate_puzzle.sh
+      run: ./tools/generate_puzzle.sh
     - name: compile
-      run: ./tests/compile.sh
+      run: ./tools/compile.sh
     - name: test
-      run: ./tests/test.sh
+      run: ./tools/test.sh
     - name: clean
-      run: ./tests/clean.sh
+      run: ./tools/clean.sh

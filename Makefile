@@ -1,13 +1,13 @@
 all: generate compile test clean
 
 generate:
-	./tests/generate_puzzle.sh
+	./tools/generate_puzzle.sh
 
 compile:
-	./tests/compile.sh
+	./tools/compile.sh
 
 test:
-	./tests/test.sh
+	./tools/test.sh
 
 clean:
-	./tests/clean.sh
+	./tools/clean.sh

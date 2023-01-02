@@ -12,7 +12,7 @@ static void combination(combination_t *c) {
   printf("> ");
   for (unsigned i = 0; i < c->r; ++i) {
     printf("%u ", c->combi[i]);
-    //const input_t *input = inputs[c->combi[i]]
+    // const input_t *input = inputs[c->combi[i]]
   }
   printf("\n");
 }

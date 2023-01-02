@@ -10,12 +10,12 @@
 #define TEASPOONS 100
 
 typedef struct input {
-    const char *ingredient;
-    int capacity;
-    int durability;
-    int flavor;
-    int texture;
-    int calories;
+  const char *ingredient;
+  int capacity;
+  int durability;
+  int flavor;
+  int texture;
+  int calories;
 } input_t;
 
 #ifndef PUZZLE
@@ -54,10 +54,14 @@ int main(void) {
       calories += c[j] * in->calories;
     }
 
-    if (capacity < 0) capacity = 0;
-    if (durability < 0) durability = 0;
-    if (flavor < 0) flavor = 0;
-    if (texture < 0) texture = 0;
+    if (capacity < 0)
+      capacity = 0;
+    if (durability < 0)
+      durability = 0;
+    if (flavor < 0)
+      flavor = 0;
+    if (texture < 0)
+      texture = 0;
 
     score = capacity * durability * flavor * texture;
     if (score > part_1) {
