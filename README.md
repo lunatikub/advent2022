@@ -11,11 +11,17 @@ $ ls
   sample.txt
 ```
 
-## Day completed
+## Days completed
 
-> **Total day completed (21/200)**
+> **Total days completed (22/200)**
 
-![](https://geps.dev/progress/10)
+![](https://geps.dev/progress/11)
+
+### 2022 (1/25)
+
+![](https://geps.dev/progress/4)
+
+ + **Day 1**: Simple counter & arithmetic [(Calorie Counting)](https://adventofcode.com/2022/day/1)
 
 ### 2021 (3/25) 
 
@@ -33,7 +39,7 @@ $ ls
  + **Day 2**: Simple string manipulation: [(Inventory Management System)](https://adventofcode.com/2018/day/2)
  + **Day 3**: Two dimensional array manipulation: [(No Matter How You Slice It)](https://adventofcode.com/2018/day/3)
  + **Day 4**
- + **Day 5**: String manipulation (memmove): [(Day 5: Alchemical Reduction)](https://adventofcode.com/2018/day/5)
+ + **Day 5**: String manipulation (memory move): [(Day 5: Alchemical Reduction)](https://adventofcode.com/2018/day/5)
 
 ### 2015 (15/25)
 
