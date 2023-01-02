@@ -10,7 +10,12 @@ nr_input=0
 
 while read -r line
 do
-  echo "{\"$line\"},"
+  if [ "$line" = "" ]
+  then
+    echo "{-1},"
+  else
+    echo "{$line},"
+  fi
   nr_input=$((nr_input + 1))
 done < $INPUT
 
