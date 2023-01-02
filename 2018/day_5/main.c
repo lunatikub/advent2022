@@ -77,7 +77,7 @@ int main(void) {
   char *in = strdup(inputs[0].str);
 
   unsigned len = fully_reaction(in);
-  printf("part 1: %u\n", len);
+  printf("> part 1: %u\n", len);
 
   unsigned min = strlen(in);
   for (unsigned letter = 0; letter < 26; ++letter) {
@@ -88,7 +88,7 @@ int main(void) {
       min = len;
     }
   }
-  printf("part 2: %u\n", min);
+  printf("> part 2: %u\n", min);
 
   free(in);
   return 0;

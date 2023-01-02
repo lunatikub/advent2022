@@ -16,4 +16,8 @@ typedef struct input {
 #include "puzzle.h"
 #endif
 
-int main(void) { return 0; }
+int main(void) {
+  printf("> part 1: %u\n", 0);
+  printf("> part 2: %u\n", 0);
+  return 0;
+}
