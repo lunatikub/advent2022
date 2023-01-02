@@ -20,15 +20,11 @@ typedef struct input {
 static inline bool is_lower(char c) { return (c >= 'a' && c <= 'z'); }
 static inline bool is_upper(char c) { return (c >= 'A' && c <= 'Z'); }
 
-static  bool is_reacting(char c1, char c2) {
-  if (is_lower(c1) == true &&
-      is_upper(c2) == true &&
-      (c1 - 'a' == c2 - 'A')) {
+static bool is_reacting(char c1, char c2) {
+  if (is_lower(c1) == true && is_upper(c2) == true && (c1 - 'a' == c2 - 'A')) {
     return true;
   }
-  if (is_upper(c1) == true &&
-      is_lower(c2) == true &&
-      (c1 - 'A' == c2 - 'a')) {
+  if (is_upper(c1) == true && is_lower(c2) == true && (c1 - 'A' == c2 - 'a')) {
     return true;
   }
   return false;
@@ -64,7 +60,8 @@ static void remove_unit(char *in, unsigned c) {
   while (i < len) {
     if (in[i] == (char)(c + 'a') || in[i] == (char)(c + 'A')) {
       move(in, i, len, 1);
-      len--;;
+      len--;
+      ;
     } else {
       ++i;
     }

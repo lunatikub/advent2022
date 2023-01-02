@@ -2,14 +2,14 @@
 
 script_dir=$(realpath $(readlink -f $(dirname $0)))
 
-source $script_dir/conf
+source $script_dir/../tests/conf
 source $script_dir/common.sh
 
 OUT=$(mktemp -t "AOC.OUT.XXXXXX")
 
-generate_puzzle() {
+compile() {
   local start=$(get_time_ms)
-  make puzzle.h > $OUT 2>&1
+  make puzzle > $OUT 2>&1
   res=$?
   local end=$(get_time_ms)
   tot_ms=$((tot_ms + (end - start)))
@@ -24,8 +24,8 @@ generate_puzzle() {
 }
 
 tot_ms=0
-title "generate puzzle"
-foreach_day generate_puzzle
+title "compilation"
+foreach_day compile
 echo -e "\nTotal: ${CYAN}${tot_ms}ms${ENDCOLOR}"
 
 rm -rf $OUT

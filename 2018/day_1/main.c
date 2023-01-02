@@ -22,7 +22,7 @@ typedef struct input {
 #endif
 
 #define SZ 200000
-static bool freqs[SZ * 2] = { false };
+static bool freqs[SZ * 2] = {false};
 
 static bool solve_puzzle(int *freq) {
   for (unsigned i = 0; i < NR_INPUT; ++i) {

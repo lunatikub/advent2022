@@ -23,7 +23,8 @@ static unsigned count_increased(const input_t *in) {
 
   for (unsigned i = 1; i < NR_INPUT; ++i) {
     int curr = in[i].n;
-    if (prev < curr) ++n;
+    if (prev < curr)
+      ++n;
     prev = curr;
   }
   return n;

@@ -8,17 +8,18 @@ $ ls
   Makefile
   puzzle.sh
   puzzle.txt
-  sample.ttx
+  sample.txt
 ```
 
 ## Day completed
 
-### 2021 (2/25) 
+### 2021 (3/25) 
 
-![](https://geps.dev/progress/8)
+![](https://geps.dev/progress/12)
 
  + **Day 1**: Simple counter [(Sonar Sweep)](https://adventofcode.com/2021/day/1)
  + **Day 2**: Simple counter [(Dive !)](https://adventofcode.com/2021/day/2)
+ + **Day 3**: Bit manipulation [(Binary Diagnostic)](https://adventofcode.com/2021/day/3)
 
 ### 2018 (4/25)
 

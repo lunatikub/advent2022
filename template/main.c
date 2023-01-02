@@ -17,11 +17,11 @@ typedef struct input {
 #endif
 
 int main(void) {
-   for (unsigned i = 0; i < NR_INPUT; ++i) {
+  for (unsigned i = 0; i < NR_INPUT; ++i) {
     const input_t *in = &inputs[i];
     (void)in;
   }
- printf("> part 1: %u\n", 0);
+  printf("> part 1: %u\n", 0);
   printf("> part 2: %u\n", 0);
   return 0;
 }
