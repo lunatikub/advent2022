@@ -13,15 +13,16 @@ $ ls
 
 ## Days completed
 
-> **Total days completed (22/200)**
+> **Total days completed (23/200)**
 
 ![](https://geps.dev/progress/11)
 
-### 2022 (1/25)
+### 2022 (2/25)
 
-![](https://geps.dev/progress/4)
+![](https://geps.dev/progress/8)
 
  + **Day 1**: Simple counter & arithmetic [(Calorie Counting)](https://adventofcode.com/2022/day/1)
+ + **Day 2**: Simple logic [(Rock Paper Scissors)](https://adventofcode.com/2022/day/2)
 
 ### 2021 (3/25) 
 
