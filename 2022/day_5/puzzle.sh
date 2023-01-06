@@ -1,36 +1,43 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 INPUT="$1"
 
-[ -z "$INPUT" ] && echo "input needed..." && exit 1
+###
+### Moves
+###
 
 MOVES=/tmp/moves
-CRATES=/tmp/crates
-
 grep "^move" $INPUT > $MOVES
-grep -v "^move" $INPUT > $CRATES
 
-nr_move=0
+cat <<EOF
+static const input_t inputs[] = {
+EOF
 
-echo "#include \"struct.h\""
-echo ""
-
-echo "static const move_t moves[] = {"
+nr_input=0
 
 while read -r line
 do
   nr=$(echo $line | cut -d' ' -f2)
   from=$(echo $line | cut -d' ' -f4)
   to=$(echo $line | cut -d' ' -f6)
-  echo "  { $nr, $from, $to },"
-  nr_move=$((nr_move + 1))
+  echo "{$nr,$from,$to},"
+  nr_input=$((nr_input + 1))
 done < $MOVES
 
-echo "};"
+cat <<EOF
+};
 
-echo ""
-echo "#define NR_MOVE $nr_move"
-echo ""
+#define NR_INPUT $nr_input
+EOF
+
+rm -rf $MOVES
+
+###
+### Crates
+###
+
+CRATES=/tmp/crates
+grep -v "^move" $INPUT > $CRATES
 
 tot_crate=$(tail -n 2 $CRATES | head -n1 | sed 's/.* \([0-9]*\)/\1/')
 
@@ -52,6 +59,7 @@ do
   done
 done < $CRATES
 
+echo ""
 echo "static crate_t crates[] = {"
 
 for i in $(seq 0 $((tot_crate - 1)))
@@ -69,5 +77,8 @@ echo "};"
 echo ""
 
 echo "#define NR_CRATE $tot_crate"
+
+rm -rf $CRATES
+rm -rf /tmp/tmp_crates
 
 exit 0
