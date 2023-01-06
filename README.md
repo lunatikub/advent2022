@@ -13,9 +13,9 @@ $ ls
 
 ## Days completed
 
-> **Total days completed (25/200)**
+> **Total days completed (26/200)**
 
-![](https://geps.dev/progress/12)
+![](https://geps.dev/progress/13)
 
 ### 2022 (4/25)
 
@@ -44,9 +44,9 @@ $ ls
  + **Day 4**
  + **Day 5**: String manipulation (memory move): [(Day 5: Alchemical Reduction)](https://adventofcode.com/2018/day/5)
 
-### 2015 (15/25)
+### 2015 (16/25)
 
-![](https://geps.dev/progress/60)
+![](https://geps.dev/progress/64)
 
  + **Day 1**: Simple string manipulation and counter: [(Not Quite Lisp)](https://adventofcode.com/2015/day/1)
  + **Day 2**: Arithmetic and comparison statement: [(I Was Told There Would Be No Math)](https://adventofcode.com/2015/day/2)
@@ -65,3 +65,9 @@ $ ls
  + **Day 15**: Addition combination: [(Science for Hungry People)](https://adventofcode.com/2015/day/15)
  + **Day 16**
  + **Day 17**: Combination [(No Such Thing as Too Much)](https://adventofcode.com/2015/day/17)
+ + **Day 18**:
+ + **Day 19**:
+ + **Day 20**:
+ + **Day 21**:
+ + **Day 22**:
+ + **Day 23**: CPU instructions emulation [(Opening the Turing Lock)](https://adventofcode.com/2015/day/23)
