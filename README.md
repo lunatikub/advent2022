@@ -13,7 +13,7 @@ $ ls
 
 ## Days completed
 
-> **Total days completed (29/200)**
+> **Total days completed (30/200)**
 
 ![](https://geps.dev/progress/14)
 
@@ -42,12 +42,11 @@ $ ls
  + **Day 1**: Simple array manipulation and flag: [(Chronal Calibration)](https://adventofcode.com/2018/day/1)
  + **Day 2**: Simple string manipulation: [(Inventory Management System)](https://adventofcode.com/2018/day/2)
  + **Day 3**: Two dimensional array manipulation: [(No Matter How You Slice It)](https://adventofcode.com/2018/day/3)
- + **Day 4**
  + **Day 5**: String manipulation (memory move): [(Day 5: Alchemical Reduction)](https://adventofcode.com/2018/day/5)
 
-### 2015 (17/25)
+### 2015 (18/25)
 
-![](https://geps.dev/progress/68)
+![](https://geps.dev/progress/72)
 
  + **Day 1**: Simple string manipulation and counter: [(Not Quite Lisp)](https://adventofcode.com/2015/day/1)
  + **Day 2**: Arithmetic and comparison statement: [(I Was Told There Would Be No Math)](https://adventofcode.com/2015/day/2)
@@ -60,15 +59,10 @@ $ ls
  + **Day 9**: Permuation: [(All in a Single Night)](https://adventofcode.com/2015/day/9)
  + **Day 10**: Smoke the CPU: [(Elves Look Elves Say)](https://adventofcode.com/2015/day/10)
  + **Day 11**: Advanced string manipulation (password generation) [(Corporate Policy)](https://adventofcode.com/2015/day/11)
- + **Day 12**
  + **Day 13**: Permutation: [(Knights of the Dinner Table)](https://adventofcode.com/2015/day/13)
  + **Day 14**: Sequentially computing: [(Reindeer Olympics)](https://adventofcode.com/2015/day/14)
  + **Day 15**: Addition combination: [(Science for Hungry People)](https://adventofcode.com/2015/day/15)
- + **Day 16**
+ + **Day 16**: Range comparaison [(Aunt Sue)](https://adventofcode.com/2015/day/16)
  + **Day 17**: Combination [(No Such Thing as Too Much)](https://adventofcode.com/2015/day/17)
  + **Day 18**: Conway's Game of Life [(Like a GIF For Your Yard)](https://adventofcode.com/2015/day/18)
- + **Day 19**:
- + **Day 20**:
- + **Day 21**:
- + **Day 22**:
  + **Day 23**: CPU instructions emulation [(Opening the Turing Lock)](https://adventofcode.com/2015/day/23)
