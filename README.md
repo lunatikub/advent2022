@@ -13,7 +13,7 @@ $ ls
 
 ## Days completed
 
-> **Total days completed (31/200)**
+> **Total days completed (32/200)**
 
 ![](https://geps.dev/progress/15)
 
@@ -44,12 +44,13 @@ $ ls
  + **Day 3**: Two dimensional array manipulation: [(No Matter How You Slice It)](https://adventofcode.com/2018/day/3)
  + **Day 5**: String manipulation (memory move): [(Day 5: Alchemical Reduction)](https://adventofcode.com/2018/day/5)
 
-### 2016 (2/25)
+### 2016 (3/25)
 
-![](https://geps.dev/progress/8)
+![](https://geps.dev/progress/12)
 
  + **Day 1**: Simple arithmetic: [(No Time for a Taxicab)](https://adventofcode.com/2016/day/1)
  + **Day 2**: Simple coordinate: [(Bathroom Security)](https://adventofcode.com/2016/day/2) 
+ + **Day 2**: Simple geometry: [(Squares With Three Sides)](https://adventofcode.com/2016/day/3)
 
 ### 2015 (18/25)
 
