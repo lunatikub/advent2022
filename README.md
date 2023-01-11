@@ -44,11 +44,12 @@ $ ls
  + **Day 3**: Two dimensional array manipulation: [(No Matter How You Slice It)](https://adventofcode.com/2018/day/3)
  + **Day 5**: String manipulation (memory move): [(Day 5: Alchemical Reduction)](https://adventofcode.com/2018/day/5)
 
-### 2016 (1/25)
+### 2016 (2/25)
 
-![](https://geps.dev/progress/4)
+![](https://geps.dev/progress/8)
 
  + **Day 1**: Simple arithmetic: [(No Time for a Taxicab)](https://adventofcode.com/2016/day/1)
+ + **Day 2**: Simple coordinate: [(Bathroom Security)](https://adventofcode.com/2016/day/2) 
 
 ### 2015 (18/25)
 
