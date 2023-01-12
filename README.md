@@ -1,6 +1,12 @@
 # Advent of Code
 
-## Template
+## Architecture
+
+I solve the problematics (one by day) with a simple concept:
+  + One part in **bash** to format the input.
+  + One part in **C** to implement the logic.
+
+Each day is composed from a template:
 
 ``` bash
 $ ls
@@ -9,6 +15,60 @@ $ ls
   puzzle.sh
   puzzle.txt
   sample.txt
+```
+
+The **puzzle.sh** format the inputs (sample.txt and puzzle.txt) into an C header.  
+The **main.c** implements the logic to solve the problem.  
+
+Take a simple example to explain the concept:
+
+> Find the number of the line with the maximum sum
+
+``` text
+1 2 3
+5 6
+10 12 24
+```
+
+In this example the line ``3`` is the line with the max sum (46).
+
+In a first time we format this input into a header with the script **puzzle.sh**:
+
+``` c
+static const input_t inputs[] = {
+    { { 1, 2, 3 }, 3 },
+    { { 5, 6 }, 2 },
+    { { 10, 12, 24 }, 3 },
+};
+
+#define NR_INPUT 3
+```
+
+In the file **main.c** we have to adjust the structure input:
+
+``` c
+typedef struct input {
+  unsigned *n;
+  unsigned nr;
+} input_t;
+```
+
+And now, it is really easy to process the inputs:
+
+``` c
+unsigned max = 0;
+unsigned line = 0;
+for (unsigned i = 0; i < NR_INPUT; ++i) {
+  unsigned sum = 0;
+  for (unsigned j = 0; j < inputs[i].nr; ++j) {
+    sum += inputs[i].n[j];
+  }
+  if (sum > max) {
+    max = sum;
+    line = i;
+  }
+}
+printf("line: %u\n", line);
 ```
 
 ## Days completed
