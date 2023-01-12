@@ -10,8 +10,13 @@ nr_input=0
 
 while read -r line
 do
-  echo "  { \"$line\" },"
-  nr_input=$((nr_input + 1))
+  echo -n "{{"
+  for i in $(seq 0 $((${#line} - 1)))
+  do
+    echo -n "${line:$i:1},"
+    nr_input=$((nr_input + 1))
+  done
+  echo "}}"
 done < $INPUT
 
 cat <<EOF
