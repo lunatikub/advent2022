@@ -7,8 +7,10 @@
 #include <string.h>
 #include <sys/queue.h>
 
+#define MAX_INIT_SZ 10
+
 typedef struct input {
-  const char *str;
+  unsigned init[MAX_INIT_SZ];
 } input_t;
 
 #ifdef PUZZLE
@@ -17,52 +19,56 @@ typedef struct input {
 #include "sample.h"
 #endif
 
-#define STR_LEN 5000000
+#define SZ 4000000
 
-static unsigned count(char *in, unsigned in_len, unsigned i) {
-  unsigned count = 1;
-  while (i < in_len - 1 && in[i] == in[i + count]) {
-    ++count;
-  }
-  return count;
-}
-
-static void concat(char *out, char c, unsigned n) {
-  char tmp[STR_LEN];
-  unsigned ret = snprintf(tmp, STR_LEN, "%u%c", n, c);
-  assert(ret < STR_LEN);
-  assert(strlen(out) + ret < STR_LEN);
-  strcat(out, tmp);
-}
-
-static void seq(char *in, unsigned len, char *out) {
+static inline unsigned seq(unsigned *src, unsigned *dst, unsigned len) {
+  unsigned dst_idx = 0;
   for (unsigned i = 0; i < len; ++i) {
-    unsigned n = count(in, len, i);
-    concat(out, in[i], n);
-    i += n - 1;
+    unsigned count = 0;
+    unsigned n = src[i];
+    while (src[i] == n && i < len) {
+      ++count;
+      ++i;
+    }
+    --i;
+    dst[dst_idx++] = count;
+    dst[dst_idx++] = n;
   }
+  return dst_idx;
+}
+
+static inline void swap(unsigned **src, unsigned **dst) {
+  unsigned *tmp = *src;
+  *src = *dst;
+  *dst = tmp;
 }
 
 #define PART_1 40
 #define PART_2 50
 
 int main(void) {
-  char *in = calloc(1, STR_LEN);
-  char *out = calloc(1, STR_LEN);
+  unsigned *n1 = malloc(SZ * sizeof(unsigned));
+  unsigned *n2 = malloc(SZ * sizeof(unsigned));
 
-  strcpy(in, inputs[0].str);
+  unsigned *src = n1;
+  unsigned *dst = n2;
+  unsigned len = NR_INPUT;
 
-  for (unsigned i = 0; i < PART_2; ++i) {
-    seq(in, strlen(in), out);
-    strcpy(in, out);
-    memset(out, 0, STR_LEN);
-    if (i == PART_1 - 1) {
-      printf("> part 1: %lu\n", strlen(in));
-    }
+  memcpy(src, inputs[0].init, len * sizeof(unsigned));
+
+  for (unsigned i = 0; i < PART_1; ++i) {
+    len = seq(src, dst, len);
+    swap(&src, &dst);
   }
-  printf("> part 2: %lu\n", strlen(in));
+  printf("> part 1: %u\n", len);
 
-  free(in);
-  free(out);
+  for (unsigned i = 0; i < PART_2 - PART_1; ++i) {
+    len = seq(src, dst, len);
+    swap(&src, &dst);
+  }
+  printf("> part 2: %u\n", len);
+
+  free(n1);
+  free(n2);
   return 0;
 }
