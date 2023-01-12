@@ -13,9 +13,9 @@ $ ls
 
 ## Days completed
 
-> **Total days completed (33/200)**
+> **Total days completed (34/200)**
 
-![](https://geps.dev/progress/16)
+![](https://geps.dev/progress/17)
 
 ### 2022 (5/25)
 
@@ -53,9 +53,9 @@ $ ls
  + **Day 3**: Simple geometry: [(Squares With Three Sides)](https://adventofcode.com/2016/day/3)
  + **Day 4**: Decrypt and checksum [(Security Through Obscurity)](https://adventofcode.com/2016/day/4) 
 
-### 2015 (18/25)
+### 2015 (19/25)
 
-![](https://geps.dev/progress/72)
+![](https://geps.dev/progress/76)
 
  + **Day 1**: Simple string manipulation and counter: [(Not Quite Lisp)](https://adventofcode.com/2015/day/1)
  + **Day 2**: Arithmetic and comparison statement: [(I Was Told There Would Be No Math)](https://adventofcode.com/2015/day/2)
@@ -68,6 +68,7 @@ $ ls
  + **Day 9**: Permuation: [(All in a Single Night)](https://adventofcode.com/2015/day/9)
  + **Day 10**: Smoke the CPU: [(Elves Look Elves Say)](https://adventofcode.com/2015/day/10)
  + **Day 11**: Advanced string manipulation (password generation) [(Corporate Policy)](https://adventofcode.com/2015/day/11)
+ + **Day 12**: Json (hack with python) [(JSAbacusFramework.io)](https://adventofcode.com/2015/day/12)
  + **Day 13**: Permutation: [(Knights of the Dinner Table)](https://adventofcode.com/2015/day/13)
  + **Day 14**: Sequentially computing: [(Reindeer Olympics)](https://adventofcode.com/2015/day/14)
  + **Day 15**: Addition combination: [(Science for Hungry People)](https://adventofcode.com/2015/day/15)
