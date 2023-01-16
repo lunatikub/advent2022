@@ -113,9 +113,9 @@ printf("line: %u\n", line);
  + **Day 3**: Simple geometry: [(Squares With Three Sides)](https://adventofcode.com/2016/day/3)
  + **Day 4**: Decrypt and checksum [(Security Through Obscurity)](https://adventofcode.com/2016/day/4) 
 
-### 2015 (19/25)
+### 2015 (20/25)
 
-![](https://geps.dev/progress/76)
+![](https://geps.dev/progress/80)
 
  + **Day 1**: Simple string manipulation and counter: [(Not Quite Lisp)](https://adventofcode.com/2015/day/1)
  + **Day 2**: Arithmetic and comparison statement: [(I Was Told There Would Be No Math)](https://adventofcode.com/2015/day/2)
@@ -135,4 +135,5 @@ printf("line: %u\n", line);
  + **Day 16**: Range comparaison [(Aunt Sue)](https://adventofcode.com/2015/day/16)
  + **Day 17**: Combination [(No Such Thing as Too Much)](https://adventofcode.com/2015/day/17)
  + **Day 18**: Conway's Game of Life [(Like a GIF For Your Yard)](https://adventofcode.com/2015/day/18)
+ + **Day 20**: Prime factorization [(Infinite Elves and Infinite Houses)](https://adventofcode.com/2015/day/20)
  + **Day 23**: CPU instructions emulation [(Opening the Turing Lock)](https://adventofcode.com/2015/day/23)
