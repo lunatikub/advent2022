@@ -73,9 +73,9 @@ printf("line: %u\n", line);
 
 ## Days completed
 
-> **Total days completed (35/200)**
+> **Total days completed (36/200)**
 
-![](https://geps.dev/progress/17)
+![](https://geps.dev/progress/18)
 
 ### 2022 (5/25)
 
@@ -104,15 +104,16 @@ printf("line: %u\n", line);
  + **Day 3**: Two dimensional array manipulation: [(No Matter How You Slice It)](https://adventofcode.com/2018/day/3)
  + **Day 5**: String manipulation (memory move): [(Day 5: Alchemical Reduction)](https://adventofcode.com/2018/day/5)
 
-### 2016 (5/25)
+### 2016 (6/25)
 
-![](https://geps.dev/progress/20)
+![](https://geps.dev/progress/24)
 
  + **Day 1**: Simple arithmetic: [(No Time for a Taxicab)](https://adventofcode.com/2016/day/1)
  + **Day 2**: Simple coordinate: [(Bathroom Security)](https://adventofcode.com/2016/day/2) 
  + **Day 3**: Simple geometry: [(Squares With Three Sides)](https://adventofcode.com/2016/day/3)
  + **Day 4**: Decrypt and checksum [(Security Through Obscurity)](https://adventofcode.com/2016/day/4) 
  + **Day 5**: MD5 and hexa manipulation [(How About a Nice Game of Chess?)](https://adventofcode.com/2016/day/5)
+ + **Day 6**: String manipulation [(Signals and Noise)](https://adventofcode.com/2016/day/6)
 
 ### 2015 (20/25)
 
